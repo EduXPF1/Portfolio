@@ -1,0 +1,237 @@
+/* CSS reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+/* geral */
+    body {
+        font-family: 'Roboto', 'sans-serif';
+        line-height: 1.5;
+        color:  #00001f;
+        background-color: #ebebed;
+    }
+
+/* header */
+    header{
+        padding: 20px;
+        background: linear-gradient(170deg, blue, rgb(24, 203, 36));
+        color: #f9f9f9;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 30px;
+        margin-top: 8px;
+    }
+
+    header p{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    header nav ul li{
+        display: inline;
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+
+    header nav ul li a{
+        color: #f9f9f9;
+        text-decoration: none;
+        font-weight: bold;
+        z-index: 0;
+        position: relative;
+    }
+
+    header nav ul li a::after{
+        content: "";
+        background: linear-gradient(120deg, rgb(21, 50, 215),rgb(24, 203, 36));
+        height: 12%;
+        width: 0px;
+        border-radius: 4px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: 150ms ease-in-out;
+    }
+
+    header nav ul li a:hover::after{
+        width: 100%;
+    }
+
+    header nav ul li a:hover{
+        color: black;
+        filter: drop-shadow(0 0 2px rgb(62, 227, 50));
+    }
+
+/* sessão */
+    section{
+        padding: 18px;
+        margin: 8px auto;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        max-width: 70%;
+        background-color: #f4f4f4;
+    }
+
+    section h2{
+        text-align: center;
+        margin-bottom: 18px;
+        font-size: 22px;
+    }
+
+/* formulário */
+    form{
+        margin-top: 15px;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .main-text{
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .campo{
+        display: inline-flex;
+        align-items: center;
+        white-space: nowrap;
+        gap: 12px;
+    }
+
+    form label{
+        margin-bottom: 5px;
+    }
+
+    form input{
+        margin-right: 20px;
+        border-radius: 4px;
+        border-width: 1px;
+    }
+
+    form textarea{
+        border-radius: 4px;
+        border-width: 1px;
+        display: inline-block;
+        vertical-align: bottom;
+        margin: 10px 10px 0px 0px;
+        width: 100%;
+        max-width: 850px;
+        min-height: 100px;
+    }
+
+    .acima{
+        display: block;
+        margin-top: 20px;
+    }
+
+    form button{
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 100px;
+        margin-top: 8px;
+        position: relative;
+        z-index: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    form button::after{
+        content: "";
+        background: linear-gradient(140deg, rgb(21, 50, 215),rgb(185, 59, 227));
+        height: 110%;
+        width: 105%;
+        border-radius: 100px;
+        position: absolute;
+        z-index: -2;
+        box-shadow: 2px 2px 12px rgb(159, 159, 159);
+        
+    }
+
+    form button::before{
+        content: "";
+        background-color: #f0f0f0;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        z-index: -1;
+    }
+
+    form button:hover{
+        color: white;
+    }
+
+    form button:hover::before{
+        z-index: -3;
+    }
+
+    form button:active::after{
+        background: linear-gradient(120deg, rgb(209, 193, 20),rgb(24, 203, 36));
+    }
+
+    form button:active{
+        color: black;
+    }
+
+/* artigo */
+    article{
+        margin-bottom: 18px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    article a{
+        color: #00001f;
+        text-decoration: none;
+        font-weight: bold;
+        z-index: 0;
+        position: relative;
+    }
+
+    article a::after{
+        content: "";
+        background: linear-gradient(120deg, rgb(21, 50, 215),rgb(24, 203, 36));
+        height: 0.05cm;
+        width: 0px;
+        border-radius: 4px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: 150ms ease-in-out;
+    }
+
+    article a:hover::after{
+        width: 100%;
+    }
+
+    article a:hover{
+        color: rgb(125, 10, 225);
+    }
+
+/* footer */
+    footer{
+        color: #838285;
+        text-align: center;
+    }
+
+    footer a{
+        color: #838285;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    footer a:hover{
+        color: rgb(125, 10, 225);
+        text-decoration: underline;
+    }
