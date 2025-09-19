@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
 //utilitarios
 
 const obterElemento = (id) => document.getElementById(id);
-const obterRange = () => document.getElementById("range");
-const limitar = () => document.getElementById("limiteDT");
+const bloquear = (elemento) => obterElemento(elemento).disabled = true;
+const desbloquear = (elemento) => obterElemento(elemento).disabled = false;
 const sortear = (limite) => Math.floor(Math.random() * (limite+1));
 const limpar = () => {
     obterElemento("range").value = "";
@@ -30,12 +30,12 @@ function configurar(){
     num = sortear(parseInt(obterElemento("range").value));
     range = parseInt(obterElemento("range").value);
     tentativasRestantes = obterElemento("limiteDT").value;
-    obterElemento("range").disabled = true;
-    obterElemento("limiteDT").disabled = true;
-    obterElemento("enviar").disabled = true;
-    obterElemento("chute").disabled = false;
-    obterElemento("chutar").disabled = false;
-    obterElemento("reiniciar").disabled = false;
+    bloquear("range");
+    bloquear("limiteDT");
+    bloquear("enviar");
+    desbloquear("chute");
+    desbloquear("chutar");
+    desbloquear("reiniciar");
     obterElemento("limite").textContent = tentativasRestantes;
 }
 
@@ -47,6 +47,8 @@ function feedback(chute){
         return;
     }else if(chute == num){
         obterElemento("dica").textContent = 'VOCÊ GANHOU :D O número secreto era ' + chute + '! Para jogar novamente, clique em "Reiniciar" e configure novamente. ';
+        bloquear("chute");
+        bloquear("chutar");
     }else if(tentativasRestantes == 0){
         obterElemento("dica").textContent = 'Você perdeu :( O número secreto era ' + num + '! Para jogar novamente, clique em "Reiniciar" e configure novamente. ';
     }else if(chute < num){
@@ -70,10 +72,10 @@ function feedback(chute){
 //botao reiniciar
 function reiniciar(){
     limpar();
-    obterElemento("range").disabled = false;
-    obterElemento("limiteDT").disabled = false;
-    obterElemento("enviar").disabled = false;
-    obterElemento("chute").disabled = true;
-    obterElemento("chutar").disabled = true;
-    obterElemento("reiniciar").disabled = true;
+    desbloquear("range");
+    desbloquear("limiteDT");
+    desbloquear("enviar");
+    bloquear("chute");
+    bloquear("chutar");
+    bloquear("reiniciar");
 }
