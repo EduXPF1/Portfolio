@@ -1,0 +1,221 @@
+/* CSS reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+/* geral */
+    body {
+        font-family: 'Roboto', 'sans-serif';
+        line-height: 1.5;
+        color:  #00001f;
+        background-color: #ebebed;
+    }
+
+/* header */
+    header{
+        padding: 20px;
+        background: linear-gradient(170deg, blue, rgb(24, 203, 36));
+        color: #f9f9f9;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 50px;
+        margin: 26px;
+    }
+
+/* sessão */
+    section{
+        padding: 15px;
+        margin: 8px auto;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        max-width: 58%;
+        background-color: #f4f4f4;
+        text-align: center;
+    }
+
+    section h2{
+        margin-bottom: 10px;
+        font-size: 22px;
+        text-align: left;
+    }
+
+    section p{
+        text-align: left;
+    }
+
+    .campo{
+        display: inline-flex;
+        align-items: center;
+        white-space: nowrap;
+        gap: 12px;
+        font-weight: bold;
+    }
+
+    section label{
+        margin-bottom: 5px;
+        font-size: medium;
+    }
+
+    section input{
+        margin-right: 20px;
+        border-radius: 4px;
+        border-width: 1px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .painel {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      font-weight: bold;
+    }
+
+    section.painel label{
+        font-size: larger;
+        font-weight: bold;
+    }
+
+    #valor{
+        padding: 30px;
+    }
+    
+    .direita, .esquerda{
+        flex: 1;
+    }
+
+    article{
+        margin-bottom: 18px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        height: 70px;
+        width: 475px;
+    }
+
+    article p{
+        text-align: center;
+    }
+
+    #troco{
+        max-width: 50%;
+    }
+
+    #divtroco{
+        display: flex;
+        justify-content: center;
+    }
+
+
+/*tabela*/
+    .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 3 colunas iguais */
+    gap: 5px;
+    margin-right: 40%;
+    }
+
+    .grid div {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    .titulo {
+        font-weight: bold;
+    }
+
+/*botao*/
+    button{
+        border: none;
+        color: black;
+        padding: 8px 20px;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 100px;
+        margin-top: 8px;
+        position: relative;
+        z-index: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    button#retirar{
+        padding: 12px 25px;
+    }
+
+    button::after{
+        content: "";
+        background: linear-gradient(140deg, rgb(21, 50, 215),rgb(185, 59, 227));
+        height: 110%;
+        width: 105%;
+        border-radius: 100px;
+        position: absolute;
+        z-index: -2;
+        box-shadow: 2px 2px 12px rgb(159, 159, 159);
+        
+    }
+
+    button::before{
+        content: "";
+        background-color: #f0f0f0;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        z-index: -1;
+    }
+
+    button:hover{
+        color: white;
+    }
+
+    button:hover::before{
+        z-index: -3;
+    }
+
+    button:active::after{
+        background: linear-gradient(120deg, rgb(209, 193, 20),rgb(24, 203, 36));
+    }
+
+    button:active{
+        color: black;
+    }
+
+    button:disabled::before{
+        background-color: #dddddd;
+    }
+
+    button:disabled:hover{
+        color: black;
+    }
+
+    button:disabled:hover::before{
+        z-index: -1;
+    }
+
+/* footer */
+    footer{
+        color: #838285;
+        text-align: center;
+    }
+
+    footer a{
+        color: #838285;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    footer a:hover{
+        color: rgb(125, 10, 225);
+        text-decoration: underline;
+    }

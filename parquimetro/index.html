@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parquimetro</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>PARQUIMETRO</h1>
+        </header>
+        <section>
+            <h2>Como funciona:</h2>
+            <p>Bem-vindo(a) ao parquimetro, para reservar o local por favor deposite o valor referente ao tempo que deseja alugar:</p>
+            <div class="grid">
+                <div class="titulo">Valor</div>
+                <div class="titulo">Tempo</div>
+
+                <div>R$ 1,00</div>
+                <div>30 minutos</div>
+
+                <div>R$ 1,75</div>
+                <div>60 minutos</div>
+
+                <div>R$ 3,00</div>
+                <div>120 minutos (maximo permitido)</div>
+            </div>
+        </section>
+        <section class="painel">
+                <div class="esquerda">
+                    <h2>Alugar:</h2>
+                    <label for="valor">Valor a depositar:</label><br>
+                    <input type="number" id="valor" required><br>
+                    <button id="depositar" onclick="feedback(parseFloat(obterElemento('valor').value))">Depositar</button><br><br>
+                    <button id="retirar" onclick="retirar()">Retirar veiculo</button>
+                </div>
+                <div class="direita">
+                    <label for="feedback">Tempo alugado:</label>
+                        <article id="feedback">
+                            <p id="resumo"></p>
+                        </article>
+                    <label for="troco">Seu troco:</label>
+                    <div id="divtroco">
+                        <article id="troco">
+                            <p id="valortroco"></p>
+                        </article>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Eduardo - Todos os direitos reservados. </p>
+        <p>Entre em contato:</p>
+        <a href="">Intagram |</a>
+        <a href="">LinkedIn </a>
+    </footer>
+</body>
+</html>
