@@ -1,38 +1,13 @@
 //utilitarios
-    const link = "https://crudcrud.com/api/21d6c1c417b242239440e2d23d17f2b3";
-    const obterElemento = (id) => document.getElementById(id);
-    const atualizar = (tema, botao) =>{
-        if (tema === "dark") {
-            document.body.classList.add("dark");
-            botao.textContent = '🌙';
-        } else {
-            document.body.classList.add("light");
-            botao.textContent = '☀️';
-        }
-    }
-    const enviar = (id) =>{
-        const txt = obterElemento(id).value;
-
-    }
-
-//buscar digitação inacabada
-    document.addEventListener("DOMContentLoaded", () => {
-        obterElemento("nome").value = sessionStorage.getItem("nome");
-        obterElemento("mail").value = sessionStorage.getItem("mail");
-        obterElemento("end").value = sessionStorage.getItem("end");
-        obterElemento("fone").value = sessionStorage.getItem("fone");
-    })
-
+    const link = "https://crudcrud.com/api/91978e23daee4c6eaf6dadf10e6d12ad";
+    import { obterElemento, atualizar, buscarInacabado, limparInfo, info, btts, placeholder, criarBtt } from "./util.js";
 
 //ouvir fim da digitaçao e salvar
     const inputs = document.querySelectorAll("input");
 
     inputs.forEach(entrada => {
-        entrada.addEventListener("blur", (evento) => {
-            const id = evento.target.id;
-            const txt = evento.target.value;
-            sessionStorage.setItem(id, txt);
-        });
+        document.addEventListener("DOMContentLoaded", () => buscarInacabado(entrada))
+        entrada.addEventListener("blur", (evento) => sessionStorage.setItem(evento.target.id, evento.target.value))
     });
 
 //buscar registros salvos
@@ -41,16 +16,13 @@
     fetch(`${link}/registros`)
         .then(resposta => {
         console.log('Status:', resposta.status);
-        if (!resposta.ok) {
-            throw new Error('Erro na requisição');
-        }
+        if (!resposta.ok) throw new Error('Erro na requisição');
         return resposta.json();
         })
 
         .then(listaReg => {
             listaReg.forEach(cliente => {
                 const item = document.createElement("li");
-
                 item.innerHTML = `${cliente.nome} <div class= "libtt" data-id="${cliente._id}"> <button class="ver">+</button> </div> `;
                 lista.appendChild(item);
             });
@@ -91,57 +63,43 @@
             })
         })
         .then(resposta => {
-            if (!resposta.ok) {
-                throw new Error('Erro na requisição');
-            }
+            if (!resposta.ok) throw new Error('Erro na requisição');
             return resposta.json();
         })
         .then(cliente => {
                 const item = document.createElement("li");
-
                 item.innerHTML = `${cliente.nome} <div class= "libtt" data-id="${cliente._id}"> <button class="ver">+</button> </div> `;
                 lista.appendChild(item);
         })
         .catch(error => console.error("Erro ao enviar", error));
 
-        obterElemento("nome").value = "";
-        obterElemento("mail").value = "";
-        obterElemento("end").value = "";
-        obterElemento("fone").value = "";
-        sessionStorage.setItem("nome", "");
-        sessionStorage.setItem("mail", "");
-        sessionStorage.setItem("end", "");
-        sessionStorage.setItem("fone", "");
-    
+        inputs.forEach(campo => {
+            campo.value = "";
+            sessionStorage.setItem(campo, "");
+        });
     })
 
 //botao +
     let ocupado = false;
-    let id = "aaa";
-    const placeholder = obterElemento("naoSelecionado");
+    let id = "aa";
 
     document.addEventListener("click", (evento) =>{
         const btt = evento.target.closest(".ver");
         if(!btt) return;
 
         id = evento.target.closest(".libtt").dataset.id;
-        const info = obterElemento("info");
+
+        if(ocupado) limparInfo(false)
 
         fetch(`${link}/registros/${id}`)
         .then(resposta => {
         console.log('Status:', resposta.status);
-        if (!resposta.ok) {
-            throw new Error('Erro na requisição');
-        }
+        if (!resposta.ok) throw new Error('Erro na requisição');
         return resposta.json();
         })
         .then(cliente => {
-            if(!!ocupado){
-                obterElemento("info").querySelectorAll("li").forEach(item =>{
-                    item.remove();
-                });
-            }
             console.log("cliente", cliente);
+
             const nome = document.createElement("li");
             nome.innerHTML = `Nome: ${cliente.nome}`;
             info.appendChild(nome);
@@ -154,6 +112,8 @@
             const fone = document.createElement("li");
             fone.innerHTML = `Telefone: ${cliente.fone}`;
             info.appendChild(fone);
+            criarBtt("lim", "Limpar");
+            criarBtt("x", "Excluir");
         })
         .catch(error => console.error("Erro ao solicitar dados", error));
 
@@ -161,17 +121,6 @@
             placeholder.remove();
             ocupado = true;
         }
-
-        const bttlim = document.createElement("button");
-        bttlim.id = "lim";
-        bttlim.className = "lim";
-        bttlim.textContent = `Limpar`;
-        obterElemento("btts").appendChild(bttlim);
-        const bttx = document.createElement("button");
-        bttx.id = "x";
-        bttx.className = "x";
-        bttx.textContent = `Excluir`;
-        obterElemento("btts").appendChild(bttx);
     });
 
 //botao x
@@ -184,14 +133,9 @@
         })
         .then(res => {
             if (res.ok) {
-                alvo = document.querySelector(`.libtt[data-id="${id}"]`);
+                const alvo = document.querySelector(`.libtt[data-id="${id}"]`);
                 alvo.closest("li").remove();
-                obterElemento("lim").remove();
-                obterElemento(`x`).remove();
-                obterElemento("info").querySelectorAll("li").forEach(item =>{
-                    item.remove();
-                });
-                obterElemento("info").appendChild(placeholder);
+                limparInfo(true);
                 ocupado = false;
             } else {
                 console.error("Erro ao deletar:", res.status);
@@ -205,12 +149,7 @@
         const btt = evento.target.closest(".lim");
         if(!btt) return;
 
-        obterElemento("lim").remove();
-        obterElemento(`x`).remove();
-        obterElemento("info").querySelectorAll("li").forEach(item =>{
-            item.remove();
-        });
-        obterElemento("info").appendChild(placeholder);
+        limparInfo(true);
         ocupado = false;
     });
 
