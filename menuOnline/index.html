@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header>
+    <img id="fundo" src="imgs/fundo1_800.png" srcset="imgs/fundo1_400.png 400w, imgs/fundo1_800.png 800w"
+        sizes="(max-width: 620px) 400px, (max-width: 1200px) 800px" alt="Logo2">
+
+    <img id="logo" src="imgs/logo2_800.png" srcset="imgs/logo2_400.png 400w, imgs/logo2_800.png 800w"
+        sizes="(max-width: 620px) 400px, (max-width: 1200px) 800px" alt="Logo2">
+    
+    <div class="centro">
+        <h2>Bem-vindo ao nosso</h2>
+        <h1>Cardápio</h1>
+        <nav>
+            <ul>
+                <li><a href="#bebes">Bebidas</a> </li>
+                <li><a href="#comes">Pratos</a> </li>
+                <li><a href="#drink">Drinks e Doses</a> </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="contatos">
+            <h2>Nossos contatos:</h2>
+            <span class="ctt"> 
+                <img id="wpp" src="imgs/WhatsApp_Logo_800.png" srcset="imgs/WhatsApp_Logo_400.png 400w, imgs/WhatsApp_Logo_800.png 800w"
+                    sizes="(max-width: 620px) 400px, (max-width: 1200px) 800px" alt="WhatsAppIcon">
+                99 99876-5432 </span>
+            <span class="ctt"> 
+                <img id="ig" src="imgs/Instagram_icon_800.png" srcset="imgs/Instagram_icon_400.png 400w, imgs/Instagram_icon_800.png 800w"
+                    sizes="(max-width: 620px) 400px, (max-width: 1200px) 800px" alt="InstagramIcon">
+                @espetinho </span>
+    </div>
+    </header>
+
+    <section id="bebes">
+    <h2>Bebidas</h2>
+    <ul>
+        <li>
+            <span class="item">Brahma 600ml</span>
+            <span class="preco">R$ 8,50</span>
+        </li>
+        <li>
+            <span class="item">Antártica(Boa) 600ml</span>
+            <span class="preco">R$ 7,50</span>
+        </li>
+    </ul>
+    </section>
+
+    <section>
+    <h2>Não alcoolicos</h2>
+    <ul>
+        <li>
+            <span class="item">Refrigerantes 2L</span>
+            <span class="preco">R$ 12,00</span>
+        </li>
+        <li>
+            <span class="item">Refrigerantes 1L</span>
+            <span class="preco">R$ 7,00</span>
+        </li>
+        <li>
+            <span class="item">Refrigerantes 200ml</span>
+            <span class="preco">R$ 2,50</span>
+        </li>
+    </ul>
+    </section>
+        
+    <section id="comes">
+        
+    <h2>Pratos</h2>
+    <ul>
+        <li>
+        <div class="info">
+            <span class="item">Espetinhos</span>
+            <span class="desc">Opções: carne de boi, carne de porco, pão de alho, linguiça, coraçãozinho, e frango.
+            </span>
+        </div>
+        <span class="preco">R$ 6,00</span>
+        </li>
+        <li>
+        <div class="info">
+            <span class="item">Porção de fritas</span>
+            <span class="desc">Batatas fritas com queijo.
+            </span>
+        </div>
+        <span class="preco">R$ 20,00</span>
+        </li>
+        <li>
+        <div class="info">
+            <span class="item">Porção de figado</span>
+            <span class="desc">Fígado de gado a moda da casa.
+            </span>
+        </div>
+        <span class="preco">R$ 30,00</span>
+        </li>
+    </ul>
+    </section>
+
+    <section id="drink">
+        
+    <h2>Drinks</h2>
+    <ul>
+        <li>
+        <div class="info">
+            <span class="item">Campari</span>
+            <span class="desc">Opções de acréscimo: Gelo simples, Gelo saborizado, Limão, Licor de canela, Dose dupla.
+            </span>
+        </div>
+        <span class="preco">R$ 10,00</span>
+        </li>
+        <li>
+        <div class="info">
+            <span class="item">Caipirinha</span>
+            <span class="desc">Opções de sabor: Limão, Morango, Melancia.
+            </span>
+        </div>
+        <span class="preco">R$ 15,00</span>
+        </li>
+        <li>
+        <div class="info">
+            <span class="item">Copão de whisky</span>
+            <span class="desc">Copo de 500ml com Whisky, Energético, e Gelo simples ou saborizado.
+            </span>
+        </div>
+        <span class="preco">R$ 25,00</span>
+        </li>
+    </ul>
+    </section>
+
+    <script>
+        function atualizarAlturaHeader() {
+            const header = document.querySelector('header');
+            document.documentElement.style.setProperty('--header-height', header.offsetHeight + 'px');
+        }
+
+        window.addEventListener('load', atualizarAlturaHeader);
+        window.addEventListener('resize', atualizarAlturaHeader);
+    </script>
+    
+    <footer>
+        <p>&copy; 2025 Eduardo - Todos os direitos reservados. </p>
+        <p>Entre em contato:</p>
+        <a href="">Intagram |</a>
+        <a href="">LinkedIn </a>
+    </footer>
+</body>
+</html>

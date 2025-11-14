@@ -1,0 +1,243 @@
+/* CSS reset */
+  * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+/* header */
+    header{
+        font-family: 'Roboto', 'sans-serif';
+        padding: 1%;
+        background-color: #b22222;
+        color: white;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        z-index: 1000;
+        overflow: hidden;
+        display: grid;
+        grid-template-areas: "logo centro centro contatos";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-items: center;
+    }
+
+    .centro{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4em;
+        grid-area: centro;
+    }
+
+    .contatos{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        font-size: 0.9rem;
+        grid-area: contatos;
+        h2{
+            font-size: 2em;
+            margin-bottom: 2%;
+        }
+        .ctt{
+            font-size: 1.3em;
+        }
+    }
+
+    #logo{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: var(--header-height);
+        z-index: 1;
+    }
+
+    #fundo{
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+        opacity: 0.4;
+    }
+
+    header *:not(img){
+        position: relative;
+        z-index: 2;
+        text-shadow:
+        -0.5px -0.5px 0 #000,  
+        0.5px -0.5px 0 #000,
+        -0.5px  0.5px 0 #000,
+        0.5px  0.5px 0 #000;
+    }
+
+    header h2 {
+        font-size: 2em;
+        margin-bottom: 0px;
+    }
+ 
+    header h1 {
+        font-size: 3.8em;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0.2em;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 1.5em;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2em;
+        transition: color 0.2s ease;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        text-decoration-thickness: 2px;
+    }
+
+    nav a:hover {
+        color: #ffd700; /* dourado rústico */
+    }
+
+    
+
+    #wpp{
+        height: 1em;
+    }
+
+    #ig{
+        height: 1em;
+    }
+
+
+
+/*geral*/
+    html, body {
+        height: 100%;
+        flex-direction: column;
+        scroll-behavior: smooth;
+    }
+
+    :root {
+        --header-height: 0px;
+    }
+
+    @media (max-width: 620px){
+        .contatos{
+            gap: 0em;
+            h2{
+                font-size: 1.5em;
+                margin-bottom: 8%;
+            }
+            .ctt{
+                font-size: 1.1em;
+            }
+        }
+
+        nav{
+            margin-bottom: 0.5em;
+        }
+
+        .centro{
+            gap: 0em;
+        }
+
+        header h1{
+            margin-top: -0.2em;
+        }
+    }
+
+    body {
+        font-family: 'Roboto', 'sans-serif';
+        line-height: 1.5;
+        color:  #00001f;
+        background-image: url("imgs/bc_800.png");
+        margin: 0;
+        padding-top: var(--header-height);
+    }
+
+    h2{
+        margin-bottom: 1rem;
+        font-size: 2em;
+    }
+    
+    section {
+        scroll-margin-top: var(--header-height);  
+        padding-top: var(--header-height);
+        padding: 1.2em 1.2em;
+        margin: 0.5% 0.5%;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #ffffffde;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    section ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+    section ul li{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        padding: 0.8em 0;
+        border-bottom: 1px dotted #aaa;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item {
+        font-weight: bold;
+        color: #222;
+        font-size: 1.2em;
+    }
+
+    .desc {
+        font-size: 1em;
+        color: #666;
+    }
+
+    .preco {
+        font-weight: bold;
+        color: #000;
+    }
+
+/* footer */
+    footer{
+        color: #000000;
+        text-align: center;
+    }
+
+    footer a{
+        color: #000000;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    footer a:hover{
+        color: rgb(125, 10, 225);
+        text-decoration: underline;
+    }
