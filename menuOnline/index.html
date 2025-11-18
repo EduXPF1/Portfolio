@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardápio</title>
+    <title>Na Brasa</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 
@@ -16,19 +16,167 @@
         sizes="(max-width: 620px) 400px, (max-width: 1200px) 800px" alt="Logo2">
     
     <div class="centro">
-        <h2>Bem-vindo ao nosso</h2>
-        <h1>Cardápio</h1>
+        <h2>Bem-vindo ao</h2>
+        <h1>Espetinho na Brasa</h1>
         <nav>
             <ul>
-                <li><a href="#bebes">Bebidas</a> </li>
-                <li><a href="#comes">Pratos</a> </li>
-                <li><a href="#drink">Drinks e Doses</a> </li>
+                <li><a href="#home">Início</a> </li>
+                <li><a href="#servicos">Cardápio</a> </li>
+                <li><a href="#contatos">Contatos</a> </li>
             </ul>
         </nav>
     </div>
 
-    <div class="contatos">
-            <h2>Nossos contatos:</h2>
+    <div id="loc">
+        <h2>Venha nos visitar!</h2>
+        <p>Av. Principal, 88<br>Centro<br>Porto Alegre, RS</p>
+    </div>
+    
+    </header>
+
+    <section id="home">
+        <img id="foto" src="imgs/foto.png" alt="foto da fachada">
+        <p id="slogan">Te oferecendo as melhores carnes e as bebidas mais geladas da cidade desde 1995.</p>
+    </section>
+
+    <section id="sobreNos">
+        <h2>Sobre nós:</h2>
+        <p>Localizados na Avenida Princial 88, no centro de Porto Alegre, nós trazemos a você e a sua família toda a tradição e qualidade que construimos desde 1995, com os melhores ingredientes, as melhores carnes, e as bebidas mais geladas que você poderia pedir, além de nos orgulharmos do nosso ambiente seguro e familiar para lhe atender sempre da melhor maneira possível!<br><br>
+            Mas caso esteja se sentindo mais caseiro hoje, você também pode fazer seu pedido via delivery, e nós levaremos toda a qualidade e sabor do Espetinho na Brasa até você!<br><Br>
+            Então se estiver afim de trazer sua família para comer num ambiente agradável e de qualidade, ou se simplesmente bateu aquela fome, conte com o Espetinho na brasa e nossa equipe de profissionais para lhe oferecer os melhores pratos, carnes e bebidas que há em Porto Alegre!</p>
+    </section>
+
+    <section id="servicos">
+        <h2>Nosso Cardápio:</h2>
+        <article>
+        <h2>Bebidas</h2>
+        <ul>
+            <li>
+                <span class="item">Brahma 600ml</span>
+                <span class="preco">R$ 8,50</span>
+            </li>
+            <li>
+                <span class="item">Antártica(Boa) 600ml</span>
+                <span class="preco">R$ 7,50</span>
+            </li>
+        </ul>
+        </article>
+
+        <article>
+        <h2>Não alcoolicos</h2>
+        <ul>
+            <li>
+                <span class="item">Refrigerantes 2L</span>
+                <span class="preco">R$ 12,00</span>
+            </li>
+            <li>
+                <span class="item">Refrigerantes 1L</span>
+                <span class="preco">R$ 7,00</span>
+            </li>
+            <li>
+                <span class="item">Refrigerantes 200ml</span>
+                <span class="preco">R$ 2,50</span>
+            </li>
+        </ul>
+        </article>
+            
+        <article>
+        <h2>Pratos</h2>
+        <ul>
+            <li>
+            <div class="info">
+                <span class="item">Espetinhos</span>
+                <span class="desc">Opções: carne de boi, carne de porco, pão de alho, linguiça, coraçãozinho, e frango.
+                </span>
+            </div>
+            <span class="preco">R$ 6,00</span>
+            </li>
+            <li>
+            <div class="info">
+                <span class="item">Porção de fritas</span>
+                <span class="desc">Batatas fritas com queijo.
+                </span>
+            </div>
+            <span class="preco">R$ 20,00</span>
+            </li>
+            <li>
+            <div class="info">
+                <span class="item">Porção de figado</span>
+                <span class="desc">Fígado de gado a moda da casa.
+                </span>
+            </div>
+            <span class="preco">R$ 30,00</span>
+            </li>
+        </ul>
+        </article>
+
+        <article>
+        <h2>Drinks</h2>
+        <ul>
+            <li>
+            <div class="info">
+                <span class="item">Campari</span>
+                <span class="desc">Opções de acréscimo: Gelo simples, Gelo saborizado, Limão, Licor de canela, Dose dupla.
+                </span>
+            </div>
+            <span class="preco">R$ 10,00</span>
+            </li>
+            <li>
+            <div class="info">
+                <span class="item">Caipirinha</span>
+                <span class="desc">Opções de sabor: Limão, Morango, Melancia.
+                </span>
+            </div>
+            <span class="preco">R$ 15,00</span>
+            </li>
+            <li>
+            <div class="info">
+                <span class="item">Copão de whisky</span>
+                <span class="desc">Copo de 500ml com Whisky, Energético, e Gelo simples ou saborizado.
+                </span>
+            </div>
+            <span class="preco">R$ 25,00</span>
+            </li>
+        </ul>
+        </article>
+    </section>
+
+    <section id="depoimentos">
+        <h2>Um pouco do que nossos clientes tem a dizer:</h2>
+        <article>
+            <div class="info">
+                <span class="item">Marcelo</span>
+                <span class="comt">O lugar é muito bonito, e os espetinhos são é bons dmsss, recomendo muito!</span>
+            </div>
+            <span class="preco">12/08/2024</span>
+        </article>
+        <article>
+            <div class="info">
+                <span class="item">Luva de Pedreiro (Iran)</span>
+                <span class="comt">É O MELHOR DO MUNDO, RECEBA!!</span>
+            </div>
+            <span class="preco">18/12/2023</span>
+        </article>
+        <article>
+            <div class="info">
+                <span class="item">Xaropinho</span>
+                <span class="comt">Raapaaaaiz, e n é q os caras são bons msm, só filézin top, da próxima vez vou até convidar o meu patrão pra ir com a gente hehehe.</span>
+            </div>
+            <span class="preco">20/04/2018</span>
+        </article>
+        <article>
+            <div class="info">
+                <span class="item">Junin</span>
+                <span class="comt">Como se n bastasse comer bem e pagar barato, ainda ganhamos uma porçãozinha de brinde, nota 10!!</span>
+            </div>
+            <span class="preco">08/07/2015</span>
+        </article>
+    </section>
+
+    <section id="contatos">
+        <h2>Nós também queremos ouvir o que você tem a dizer!</h2>
+        <p>Faça seu pedido de delivery pelo nosso WhatsApp ou Instagram, e se quiser nos mandar o seu depoimento, ficaremos muito felizes em te ouvir!</p>
+        <div class="contatos">
             <span class="ctt"> 
                 <img id="wpp" src="imgs/WhatsApp_Logo_800.png" srcset="imgs/WhatsApp_Logo_400.png 400w, imgs/WhatsApp_Logo_800.png 800w"
                     sizes="(max-width: 620px) 400px, (max-width: 1200px) 800px" alt="WhatsAppIcon">
@@ -37,101 +185,14 @@
                 <img id="ig" src="imgs/Instagram_icon_800.png" srcset="imgs/Instagram_icon_400.png 400w, imgs/Instagram_icon_800.png 800w"
                     sizes="(max-width: 620px) 400px, (max-width: 1200px) 800px" alt="InstagramIcon">
                 @espetinho </span>
-    </div>
-    </header>
-
-    <section id="bebes">
-    <h2>Bebidas</h2>
-    <ul>
-        <li>
-            <span class="item">Brahma 600ml</span>
-            <span class="preco">R$ 8,50</span>
-        </li>
-        <li>
-            <span class="item">Antártica(Boa) 600ml</span>
-            <span class="preco">R$ 7,50</span>
-        </li>
-    </ul>
-    </section>
-
-    <section>
-    <h2>Não alcoolicos</h2>
-    <ul>
-        <li>
-            <span class="item">Refrigerantes 2L</span>
-            <span class="preco">R$ 12,00</span>
-        </li>
-        <li>
-            <span class="item">Refrigerantes 1L</span>
-            <span class="preco">R$ 7,00</span>
-        </li>
-        <li>
-            <span class="item">Refrigerantes 200ml</span>
-            <span class="preco">R$ 2,50</span>
-        </li>
-    </ul>
-    </section>
-        
-    <section id="comes">
-        
-    <h2>Pratos</h2>
-    <ul>
-        <li>
-        <div class="info">
-            <span class="item">Espetinhos</span>
-            <span class="desc">Opções: carne de boi, carne de porco, pão de alho, linguiça, coraçãozinho, e frango.
-            </span>
         </div>
-        <span class="preco">R$ 6,00</span>
-        </li>
-        <li>
-        <div class="info">
-            <span class="item">Porção de fritas</span>
-            <span class="desc">Batatas fritas com queijo.
-            </span>
-        </div>
-        <span class="preco">R$ 20,00</span>
-        </li>
-        <li>
-        <div class="info">
-            <span class="item">Porção de figado</span>
-            <span class="desc">Fígado de gado a moda da casa.
-            </span>
-        </div>
-        <span class="preco">R$ 30,00</span>
-        </li>
-    </ul>
-    </section>
-
-    <section id="drink">
-        
-    <h2>Drinks</h2>
-    <ul>
-        <li>
-        <div class="info">
-            <span class="item">Campari</span>
-            <span class="desc">Opções de acréscimo: Gelo simples, Gelo saborizado, Limão, Licor de canela, Dose dupla.
-            </span>
-        </div>
-        <span class="preco">R$ 10,00</span>
-        </li>
-        <li>
-        <div class="info">
-            <span class="item">Caipirinha</span>
-            <span class="desc">Opções de sabor: Limão, Morango, Melancia.
-            </span>
-        </div>
-        <span class="preco">R$ 15,00</span>
-        </li>
-        <li>
-        <div class="info">
-            <span class="item">Copão de whisky</span>
-            <span class="desc">Copo de 500ml com Whisky, Energético, e Gelo simples ou saborizado.
-            </span>
-        </div>
-        <span class="preco">R$ 25,00</span>
-        </li>
-    </ul>
+        <p>Você também pode nos mande um e-mail pelo nosso endereço "espetinhonabrasa@email.com", ou por aqui mesmo usando os campos abaixo:</p>
+        <form action="enviar_email.php">
+            <input type="text" id="nome" placeholder="Nome" required>
+            <input type="email" id="email" placeholder="E-mail" required>
+            <textarea id="msg" name="mensagem" cols="100" rows="5" placeholder="Digite a sua mensagem :)" required></textarea>
+            <button id="enviar" type="submit">Enviar</button>
+        </form>
     </section>
 
     <script>
