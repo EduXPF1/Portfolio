@@ -8,190 +8,190 @@
 </head>
 
 <body>
-    <header>
-    <img id="fundo" src="imgs/fundo1_800.png" srcset="imgs/fundo1_400.png 400w, imgs/fundo1_800.png 800w"
+    <header class="header">
+    <img class="header__img header__img--fundo" src="imgs/fundo1_800.png" srcset="imgs/fundo1_400.png 400w, imgs/fundo1_800.png 800w"
         sizes="(max-width: 620px) 400px, (max-width: 1200px) 800px" alt="Logo2">
 
-    <img id="logo" src="imgs/logo2_800.png" srcset="imgs/logo2_400.png 400w, imgs/logo2_800.png 800w"
+    <img class="header__img header__img--logo" src="imgs/logo2_800.png" srcset="imgs/logo2_400.png 400w, imgs/logo2_800.png 800w"
         sizes="(max-width: 620px) 400px, (max-width: 1200px) 800px" alt="Logo2">
     
-    <div class="centro">
-        <h2>Bem-vindo ao</h2>
-        <h1>Espetinho na Brasa</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Início</a> </li>
-                <li><a href="#servicos">Cardápio</a> </li>
-                <li><a href="#contatos">Contatos</a> </li>
+    <div class="header__centro">
+        <h2 class="header__titulo-menor">Bem-vindo ao</h2>
+        <h1 class="header__titulo-maior">Espetinho na Brasa</h1>
+        <nav class="header__nav">
+            <ul class="header__lista">
+                <li class="header__item"><a class="header__link" href="#home">Início</a> </li>
+                <li class="header__item"><a class="header__link" href="#cardapio">Cardápio</a> </li>
+                <li class="header__item"><a class="header__link" href="#contatos">Contatos</a> </li>
             </ul>
         </nav>
     </div>
 
-    <div id="loc">
-        <h2>Venha nos visitar!</h2>
-        <p>Av. Principal, 88<br>Centro<br>Porto Alegre, RS</p>
+    <div class="header__direita">
+        <h2 class="header__titulo-menor--direita">Venha nos visitar!</h2>
+        <p class="header__endereco">Av. Principal, 88<br>Centro<br>Porto Alegre, RS</p>
     </div>
     
     </header>
 
-    <section id="home">
-        <img id="foto" src="imgs/foto.png" alt="foto da fachada">
-        <p id="slogan">Te oferecendo as melhores carnes e as bebidas mais geladas da cidade desde 1995.</p>
+    <section id="home" class="section home">
+        <img class="home__foto" src="imgs/foto.png" alt="foto da fachada">
+        <p class="home__slogan">Te oferecendo as melhores carnes e as bebidas mais geladas da cidade desde 1995.</p>
     </section>
 
-    <section id="sobreNos">
-        <h2>Sobre nós:</h2>
-        <p>Localizados na Avenida Princial 88, no centro de Porto Alegre, nós trazemos a você e a sua família toda a tradição e qualidade que construimos desde 1995, com os melhores ingredientes, as melhores carnes, e as bebidas mais geladas que você poderia pedir, além de nos orgulharmos do nosso ambiente seguro e familiar para lhe atender sempre da melhor maneira possível!<br><br>
+    <section class="section sobreNos">
+        <h2 class="titulos sobreNos__titulo">Sobre nós:</h2>
+        <p class="sobreNos__texto">Localizados na Avenida Princial 88, no centro de Porto Alegre, nós trazemos a você e a sua família toda a tradição e qualidade que construimos desde 1995, com os melhores ingredientes, as melhores carnes, e as bebidas mais geladas que você poderia pedir, além de nos orgulharmos do nosso ambiente seguro e familiar para lhe atender sempre da melhor maneira possível!<br><br>
             Mas caso esteja se sentindo mais caseiro hoje, você também pode fazer seu pedido via delivery, e nós levaremos toda a qualidade e sabor do Espetinho na Brasa até você!<br><Br>
             Então se estiver afim de trazer sua família para comer num ambiente agradável e de qualidade, ou se simplesmente bateu aquela fome, conte com o Espetinho na brasa e nossa equipe de profissionais para lhe oferecer os melhores pratos, carnes e bebidas que há em Porto Alegre!</p>
     </section>
 
-    <section id="servicos">
-        <h2>Nosso Cardápio:</h2>
-        <article>
-        <h2>Bebidas</h2>
-        <ul>
-            <li>
-                <span class="item">Brahma 600ml</span>
-                <span class="preco">R$ 8,50</span>
+    <section id="cardapio" class="section cardapio">
+        <h2 class="titulos cardapio__titulo">Nosso Cardápio:</h2>
+        <article class="article cardapio__article">
+        <h2 class="titulos cardapio__titulos--classificacao">Bebidas</h2>
+        <ul class="cardapio__classificados">
+            <li class="cardapio__itens">
+                <span class="cardapio__item-nome">Brahma 600ml</span>
+                <span class="cardapio__item-preco">R$ 8,50</span>
             </li>
-            <li>
-                <span class="item">Antártica(Boa) 600ml</span>
-                <span class="preco">R$ 7,50</span>
+            <li class="cardapio__itens">
+                <span class="cardapio__item-nome">Antártica(Boa) 600ml</span>
+                <span class="cardapio__item-preco">R$ 7,50</span>
             </li>
         </ul>
         </article>
 
-        <article>
-        <h2>Não alcoolicos</h2>
-        <ul>
-            <li>
-                <span class="item">Refrigerantes 2L</span>
-                <span class="preco">R$ 12,00</span>
+        <article class="article servicos__article">
+        <h2 class="titulos cardapio__titulos--classificacao">Não alcoolicos</h2>
+        <ul class="cardapio__classificados">
+            <li class="cardapio__itens">
+                <span class="cardapio__item-nome">Refrigerantes 2L</span>
+                <span class="cardapio__item-preco">R$ 12,00</span>
             </li>
-            <li>
-                <span class="item">Refrigerantes 1L</span>
-                <span class="preco">R$ 7,00</span>
+            <li class="cardapio__itens">
+                <span class="cardapio__item-nome">Refrigerantes 1L</span>
+                <span class="cardapio__item-preco">R$ 7,00</span>
             </li>
-            <li>
-                <span class="item">Refrigerantes 200ml</span>
-                <span class="preco">R$ 2,50</span>
+            <li class="cardapio__itens">
+                <span class="cardapio__item-nome">Refrigerantes 200ml</span>
+                <span class="cardapio__item-preco">R$ 2,50</span>
             </li>
         </ul>
         </article>
             
-        <article>
-        <h2>Pratos</h2>
-        <ul>
-            <li>
-            <div class="info">
-                <span class="item">Espetinhos</span>
-                <span class="desc">Opções: carne de boi, carne de porco, pão de alho, linguiça, coraçãozinho, e frango.
+        <article class="article servicos__article">
+        <h2 class="titulos cardapio__titulos--classificacao">Pratos</h2>
+        <ul class="cardapio__classificados">
+            <li class="cardapio__itens">
+            <div class="article-esquerda">
+                <span class="cardapio__item-nome">Espetinhos</span>
+                <span class="cardapio__item-desc">Opções: carne de boi, carne de porco, pão de alho, linguiça, coraçãozinho, e frango.
                 </span>
             </div>
-            <span class="preco">R$ 6,00</span>
+            <span class="cardapio__item-preco">R$ 6,00</span>
             </li>
-            <li>
-            <div class="info">
-                <span class="item">Porção de fritas</span>
-                <span class="desc">Batatas fritas com queijo.
+            <li class="cardapio__itens">
+            <div class="article-esquerda">
+                <span class="cardapio__item-nome">Porção de fritas</span>
+                <span class="cardapio__item-desc">Batatas fritas com queijo.
                 </span>
             </div>
-            <span class="preco">R$ 20,00</span>
+            <span class="cardapio__item-preco">R$ 20,00</span>
             </li>
-            <li>
-            <div class="info">
-                <span class="item">Porção de figado</span>
-                <span class="desc">Fígado de gado a moda da casa.
+            <li class="cardapio__itens">
+            <div class="article-esquerda">
+                <span class="cardapio__item-nome">Porção de figado</span>
+                <span class="cardapio__item-desc">Fígado de gado a moda da casa.
                 </span>
             </div>
-            <span class="preco">R$ 30,00</span>
+            <span class="cardapio__item-preco">R$ 30,00</span>
             </li>
         </ul>
         </article>
 
-        <article>
-        <h2>Drinks</h2>
-        <ul>
-            <li>
-            <div class="info">
-                <span class="item">Campari</span>
-                <span class="desc">Opções de acréscimo: Gelo simples, Gelo saborizado, Limão, Licor de canela, Dose dupla.
+        <article class="article servicos__article">
+        <h2 class="titulos cardapio__titulos--classificacao">Drinks</h2>
+        <ul class="cardapio__classificados">
+            <li class="cardapio__itens">
+            <div class="article-esquerda">
+                <span class="cardapio__item-nome">Campari</span>
+                <span class="cardapio__item-desc">Opções de acréscimo: Gelo simples, Gelo saborizado, Limão, Licor de canela, Dose dupla.
                 </span>
             </div>
-            <span class="preco">R$ 10,00</span>
+            <span class="cardapio__item-preco">R$ 10,00</span>
             </li>
-            <li>
-            <div class="info">
-                <span class="item">Caipirinha</span>
-                <span class="desc">Opções de sabor: Limão, Morango, Melancia.
+            <li class="cardapio__itens">
+            <div class="article-esquerda">
+                <span class="cardapio__item-nome">Caipirinha</span>
+                <span class="cardapio__item-desc">Opções de sabor: Limão, Morango, Melancia.
                 </span>
             </div>
-            <span class="preco">R$ 15,00</span>
+            <span class="cardapio__item-preco">R$ 15,00</span>
             </li>
-            <li>
-            <div class="info">
-                <span class="item">Copão de whisky</span>
-                <span class="desc">Copo de 500ml com Whisky, Energético, e Gelo simples ou saborizado.
+            <li class="cardapio__itens">
+            <div class="article-esquerda">
+                <span class="cardapio__item-nome">Copão de whisky</span>
+                <span class="cardapio__item-desc">Copo de 500ml com Whisky, Energético, e Gelo simples ou saborizado.
                 </span>
             </div>
-            <span class="preco">R$ 25,00</span>
+            <span class="cardapio__item-preco">R$ 25,00</span>
             </li>
         </ul>
         </article>
     </section>
 
-    <section id="depoimentos">
-        <h2>Um pouco do que nossos clientes tem a dizer:</h2>
-        <article>
-            <div class="info">
-                <span class="item">Marcelo</span>
-                <span class="comt">O lugar é muito bonito, e os espetinhos são é bons dmsss, recomendo muito!</span>
+    <section class="section depoimentos">
+        <h2 class="titulos depoimentos__titulo">Um pouco do que nossos clientes tem a dizer:</h2>
+        <article class="article depoimentos__article">
+            <div class="article-esquerda">
+                <span class="depoimentos__nome">Marcelo</span>
+                <span class="depoimentos__msg">O lugar é muito bonito, e os espetinhos são é bons dmsss, recomendo muito!</span>
             </div>
-            <span class="preco">12/08/2024</span>
+            <span class="depoimentos__data">12/08/2024</span>
         </article>
-        <article>
-            <div class="info">
-                <span class="item">Luva de Pedreiro (Iran)</span>
-                <span class="comt">É O MELHOR DO MUNDO, RECEBA!!</span>
+        <article class="article depoimentos__article">
+            <div class="article-esquerda">
+                <span class="depoimentos__nome">Luva de Pedreiro (Iran)</span>
+                <span class="depoimentos__msg">É O MELHOR DO MUNDO, RECEBA!!</span>
             </div>
-            <span class="preco">18/12/2023</span>
+            <span class="depoimentos__data">18/12/2023</span>
         </article>
-        <article>
-            <div class="info">
-                <span class="item">Xaropinho</span>
-                <span class="comt">Raapaaaaiz, e n é q os caras são bons msm, só filézin top, da próxima vez vou até convidar o meu patrão pra ir com a gente hehehe.</span>
+        <article class="article depoimentos__article">
+            <div class="article-esquerda">
+                <span class="depoimentos__nome">Xaropinho</span>
+                <span class="depoimentos__msg">Raapaaaaiz, e n é q os caras são bons msm, só filézin top, da próxima vez vou até convidar o meu patrão pra ir com a gente hehehe.</span>
             </div>
-            <span class="preco">20/04/2018</span>
+            <span class="depoimentos__data">20/04/2018</span>
         </article>
-        <article>
-            <div class="info">
-                <span class="item">Junin</span>
-                <span class="comt">Como se n bastasse comer bem e pagar barato, ainda ganhamos uma porçãozinha de brinde, nota 10!!</span>
+        <article class="article depoimentos__article">
+            <div class="article-esquerda">
+                <span class="depoimentos__nome">Junin</span>
+                <span class="depoimentos__msg">Como se n bastasse comer bem e pagar barato, ainda ganhamos uma porçãozinha de brinde, nota 10!!</span>
             </div>
-            <span class="preco">08/07/2015</span>
+            <span class="depoimentos__data">08/07/2015</span>
         </article>
     </section>
 
-    <section id="contatos">
-        <h2>Nós também queremos ouvir o que você tem a dizer!</h2>
-        <p>Faça seu pedido de delivery pelo nosso WhatsApp ou Instagram, e se quiser nos mandar o seu depoimento, ficaremos muito felizes em te ouvir!</p>
-        <div class="contatos">
-            <span class="ctt"> 
-                <img id="wpp" src="imgs/WhatsApp_Logo_800.png" srcset="imgs/WhatsApp_Logo_400.png 400w, imgs/WhatsApp_Logo_800.png 800w"
+    <section id="contatos" class="section contatos">
+        <h2 class="titulos contatos__titulo">Nós também queremos ouvir o que você tem a dizer!</h2>
+        <p class="contatos__texto">Faça seu pedido de delivery pelo nosso WhatsApp ou Instagram, e se quiser nos mandar o seu depoimento, ficaremos muito felizes em te ouvir!</p>
+        <div class="contatos__area-contatos">
+            <span class="contatos__contato"> 
+                <img class="contatos__img-wpp" src="imgs/WhatsApp_Logo_800.png" srcset="imgs/WhatsApp_Logo_400.png 400w, imgs/WhatsApp_Logo_800.png 800w"
                     sizes="(max-width: 620px) 400px, (max-width: 1200px) 800px" alt="WhatsAppIcon">
                 99 99876-5432 </span>
-            <span class="ctt"> 
-                <img id="ig" src="imgs/Instagram_icon_800.png" srcset="imgs/Instagram_icon_400.png 400w, imgs/Instagram_icon_800.png 800w"
+            <span class="contatos__contato"> 
+                <img class="contatos__img-ig" src="imgs/Instagram_icon_800.png" srcset="imgs/Instagram_icon_400.png 400w, imgs/Instagram_icon_800.png 800w"
                     sizes="(max-width: 620px) 400px, (max-width: 1200px) 800px" alt="InstagramIcon">
                 @espetinho </span>
         </div>
-        <p>Você também pode nos mande um e-mail pelo nosso endereço "espetinhonabrasa@email.com", ou por aqui mesmo usando os campos abaixo:</p>
-        <form action="enviar_email.php">
-            <input type="text" id="nome" placeholder="Nome" required>
-            <input type="email" id="email" placeholder="E-mail" required>
-            <textarea id="msg" name="mensagem" cols="100" rows="5" placeholder="Digite a sua mensagem :)" required></textarea>
-            <button id="enviar" type="submit">Enviar</button>
+        <p class="contatos__texto">Você também pode nos mande um e-mail pelo nosso endereço "espetinhonabrasa@email.com", ou por aqui mesmo usando os campos abaixo:</p>
+        <form class="form" action="enviar_email.php">
+            <input class="form__input form__input--nome" type="text" placeholder="Nome" required>
+            <input class="form__input form__input--email" type="email" placeholder="E-mail" required>
+            <textarea class="form__textarea" name="mensagem" cols="100" rows="5" placeholder="Digite a sua mensagem :)" required></textarea>
+            <button class="form__btt btt" type="submit">Enviar</button>
         </form>
     </section>
 
@@ -205,11 +205,11 @@
         window.addEventListener('resize', atualizarAlturaHeader);
     </script>
     
-    <footer>
-        <p>&copy; 2025 Eduardo - Todos os direitos reservados. </p>
-        <p>Entre em contato:</p>
-        <a href="">Intagram |</a>
-        <a href="">LinkedIn </a>
+    <footer class="footer">
+        <p class="footer__txt">&copy; 2025 Eduardo - Todos os direitos reservados. </p>
+        <p class="footer__txt">Entre em contato:</p>
+        <a class="footer__link" href="">Intagram |</a>
+        <a class="footer__link" href="">LinkedIn </a>
     </footer>
 </body>
 </html>
